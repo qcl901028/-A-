@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6dq-Ne-ckr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qth-Jj-xvT">
+            <objects>
+                <navigationController id="6dq-Ne-ckr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G2D-Gf-LfF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cYl-jH-g8g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ci-N2-hBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="337"/>
+        </scene>
+        <!--绘图-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGw-7d-ZVH">
+                                <rect key="frame" x="0.0" y="317" width="600" height="283"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="gaZ-0k-Ml0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gaZ-0k-Ml0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5I0-pn-QXa">
+                                <rect key="frame" x="184" y="239" width="233" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="R9K-5s-nyX"/>
+                                    <constraint firstAttribute="width" constant="233" id="c72-AU-0gR"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="无动画"/>
+                                    <segment title="动画1"/>
+                                    <segment title="动画2"/>
+                                    <segment title="动画3"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3zU-fD-DFm"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OK-Zr-b1d">
+                                <rect key="frame" x="254" y="108" width="93" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ATX-V9-Xi0"/>
+                                    <constraint firstAttribute="width" constant="93" id="yRm-em-Oos"/>
+                                </constraints>
+                                <state key="normal" title="龙哥的名字"/>
+                                <connections>
+                                    <action selector="drawMyName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYl-tt-5ba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69d-F9-raw">
+                                <rect key="frame" x="270" y="175" width="60" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4ws-aN-Q4m"/>
+                                    <constraint firstAttribute="width" constant="60" id="BFY-tG-CvP"/>
+                                </constraints>
+                                <state key="normal" title="哆啦A梦"/>
+                                <connections>
+                                    <action selector="btnDuoLaAMeng_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Teo-Cx-4Nh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5I0-pn-QXa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Wb-Jm-p9e"/>
+                            <constraint firstItem="hGw-7d-ZVH" firstAttribute="top" secondItem="5I0-pn-QXa" secondAttribute="bottom" constant="50" id="J5l-2x-vqB"/>
+                            <constraint firstItem="hGw-7d-ZVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OmQ-Zs-jDO"/>
+                            <constraint firstItem="69d-F9-raw" firstAttribute="top" secondItem="2OK-Zr-b1d" secondAttribute="bottom" constant="37" id="ZOB-8L-ynM"/>
+                            <constraint firstItem="2OK-Zr-b1d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="aSU-c7-R0E"/>
+                            <constraint firstAttribute="trailing" secondItem="hGw-7d-ZVH" secondAttribute="trailing" id="dXN-Ue-xaE"/>
+                            <constraint firstItem="69d-F9-raw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ft2-SB-403"/>
+                            <constraint firstItem="5I0-pn-QXa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="m5v-6Z-WhC"/>
+                            <constraint firstItem="2OK-Zr-b1d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n4e-do-gsq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hGw-7d-ZVH" secondAttribute="bottom" id="wzD-8h-8xw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绘图" id="Ghs-By-8it"/>
+                    <connections>
+                        <outlet property="displayView" destination="hGw-7d-ZVH" id="DfO-gf-2oo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="347"/>
+        </scene>
+    </scenes>
+</document>
